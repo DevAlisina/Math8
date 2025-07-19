@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>آموزش تصویری و کامل ریاضی برای امتحان</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Vazirmatn Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- MathJax for LaTeX Rendering -->
+    <script>
+        MathJax = {
+          tex: {
+            inlineMath: [['$', '$'], ['\\(', '\\)']],
+            displayMath: [['$$', '$$'], ['\\[', '\\]']],
+            processEscapes: true
+          },
+          svg: {
+            fontCache: 'global'
+          }
+        };
+    </script>
+    <script type="text/javascript" id="MathJax-script" async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+    </script>
+
+    <style>
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+            background-color: #f0f2f5;
+            scroll-behavior: smooth;
+        }
+        .formula-card {
+            background-color: white;
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 24px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+            border: 1px solid #e2e8f0;
+        }
+        .formula-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+        }
+        .chapter-title {
+            color: #1e3a8a;
+            border-bottom: 2px solid #3b82f6;
+            padding-bottom: 8px;
+            margin-bottom: 24px;
+        }
+        .formula {
+            direction: ltr;
+            text-align: left;
+            padding: 12px;
+            background-color: #f8fafc;
+            border-radius: 8px;
+            margin-top: 12px;
+            overflow-x: auto;
+        }
+        .definition {
+            background-color: #eef2ff;
+            border-right: 4px solid #4f46e5;
+            padding: 12px;
+            margin-top: 12px;
+            border-radius: 0 8px 8px 0;
+        }
+        .example {
+            background-color: #f0fdf4;
+            border-right: 4px solid #22c55e;
+            padding: 12px;
+            margin-top: 12px;
+            border-radius: 0 8px 8px 0;
+            overflow-x: auto;
+        }
+        .visual-example {
+            background-color: #f5f3ff;
+            border-radius: 8px;
+            padding: 16px;
+            margin-top: 16px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .variables-list {
+            list-style-type: none;
+            padding: 0;
+            margin-top: 10px;
+            font-size: 0.9rem;
+            color: #4b5563;
+        }
+        .variables-list li {
+            display: flex;
+            align-items: center;
+        }
+        .variables-list code {
+            background-color: #e5e7eb;
+            padding: 2px 6px;
+            border-radius: 4px;
+            margin-left: 8px;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="antialiased text-gray-800">
+
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-10">
+        <div class="container mx-auto px-6 py-4">
+            <h1 class="text-3xl font-bold text-center text-blue-800">آموزش تصویری ریاضی برای امتحان</h1>
+            <p class="text-center text-gray-600 mt-2">مرور کامل تعاریف، فرمول‌ها و مثال‌های بصری تا صفحه ۱۳۴</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 sm:px-6 lg:px-8 py-10">
+
+        <!-- Chapter 1: Real Numbers -->
+        <section>
+            <h2 class="text-2xl font-bold chapter-title">فصل اول: اعداد حقیقی</h2>
+            
+            <div class="formula-card">
+                <h3 class="text-xl font-semibold text-gray-700">۱. اعداد حقیقی</h3>
+                <div class="definition">
+                    <p><strong>تعریف مطابق کتاب:</strong> اتحاد ست اعداد ناطق و غیر ناطق را به نام ست اعداد حقیقی یاد می‌کنند.</p>
+                </div>
+                <p class="mt-4 text-gray-600"><strong>توضیح ساده:</strong> هر عددی که فکرش را بکنی (چه کسری، چه اعشاری، چه رادیکالی) یک عدد حقیقی است.</p>
+                <div class="formula">$$ IR = Q \cup Q' $$</div>
+            </div>
+            
+            <div class="formula-card">
+                <h3 class="text-xl font-semibold text-gray-700">۴. قوانین اعداد توان‌دار</h3>
+                 <div class="definition">
+                    <p><strong>تعریف:</strong> قوانینی برای ساده‌سازی محاسباتی که شامل توان (طاقت) هستند.</p>
+                </div>
+                 <ul class="list-disc list-inside mt-4 space-y-2">
+                    <li><strong>ضرب توان‌ها (قاعده‌های مساوی):</strong> توان‌ها با هم جمع می‌شوند.
+                        <div class="formula">$$ a^m \times a^n = a^{m+n} $$</div>
+                    </li>
+                    <li><strong>توانِ توان (نما در نما):</strong> توان‌ها در هم ضرب می‌شوند.
+                        <div class="formula">$$ (a^n)^m = a^{n \cdot m} $$</div>
+                    </li>
+                    <li><strong>توان منفی:</strong> عدد را معکوس می‌کند و توانش مثبت می‌شود.
+                        <div class="formula">$$ a^{-n} = \frac{1}{a^n} \quad (a \neq 0) $$</div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Chapter 2: Financial Calculations -->
+        <section class="mt-12">
+            <h2 class="text-2xl font-bold chapter-title">فصل دوم: محاسبات مالی</h2>
+            
+            <div class="formula-card">
+                <h3 class="text-xl font-semibold text-gray-700">۱. تناسب</h3>
+                <div class="definition">
+                    <p><strong>تعریف مطابق کتاب:</strong> تساوی دو نسبت را تناسب گویند.</p>
+                </div>
+                <p class="mt-2 text-gray-600"><strong>توضیح ساده:</strong> مهم‌ترین قانون در تناسب، "حاصل ضرب طرفین مساوی به حاصل ضرب وسطین است".</p>
+                <div class="formula">$$ \text{if } \frac{a}{b} = \frac{c}{d} \quad \rightarrow \quad a \cdot d = b \cdot c $$</div>
+            </div>
+
+            <div class="formula-card">
+                <h3 class="text-xl font-semibold text-gray-700">۲. ربح (سود) ساده و مرکب</h3>
+                <div class="definition">
+                    <p><strong>ربح ساده:</strong> مفادی که از یک سرمایه در یک مدت معین به نرخ معین از قرار فیصدی معین حاصل می‌گردد.</p>
+                    <p><strong>ربح مرکب:</strong> اگر مفاد یک سرمایه به اصل مقدار سرمایه علاوه گردیده و دوباره به مفاد گذاشته شود.</p>
+                </div>
+                <p class="mt-4 text-gray-600"><strong>فرمول ربح ساده:</strong></p>
+                <div class="formula">$$ P = A \cdot R \cdot T $$</div>
+                <ul class="variables-list">
+                    <li><code>P</code> : ربح (مفاد)</li>
+                    <li><code>A</code> : سرمایه اصلی</li>
+                    <li><code>R</code> : نرخ ربح (فیصدی)</li>
+                    <li><code>T</code> : مدت (به سال)</li>
+                </ul>
+                <p class="mt-4 text-gray-600"><strong>فرمول ربح مرکب:</strong></p>
+                <div class="formula">$$ P = A(1 + r)^n $$</div>
+                 <ul class="variables-list">
+                    <li><code>P</code> : سرمایه جدید با مفاد</li>
+                    <li><code>A</code> : سرمایه اولیه</li>
+                    <li><code>r</code> : نرخ ربح (فیصدی)</li>
+                    <li><code>n</code> : مدت (به سال)</li>
+                </ul>
+            </div>
+        </section>
+        
+        <!-- Chapter 3 & 5: Triangles -->
+        <section class="mt-12">
+            <h2 class="text-2xl font-bold chapter-title">فصل سوم و پنجم: مشابهت و قضایای مثلث</h2>
+
+            <div class="formula-card">
+                <h3 class="text-xl font-semibold text-gray-700">۱. قضیه تالس در مثلث</h3>
+                <div class="definition">
+                    <p><strong>تعریف مطابق کتاب:</strong> هرگاه از یک نقطه یک ضلع مثلث یک خط طوری رسم شود که با یک ضلع مثلث موازی باشد پس دو ضلع دیگر مثلث را به گونه متناسب تقسیم می‌کند.</p>
+                </div>
+                <div class="visual-example">
+                    <svg width="220" height="160" viewBox="0 0 220 160" xmlns="http://www.w3.org/2000/svg">
+                        <polygon points="110,10 10,150 210,150" style="fill:#f3e8ff;stroke:#7c3aed;stroke-width:2"/>
+                        <line x1="40" y1="98" x2="180" y2="98" style="stroke:#ef4444;stroke-width:2;stroke-dasharray:4"/>
+                        <text x="105" y="8" font-size="14" fill="#1e3a8a" font-weight="bold">A</text>
+                        <text x="0" y="155" font-size="14" fill="#1e3a8a" font-weight="bold">B</text>
+                        <text x="212" y="155" font-size="14" fill="#1e3a8a" font-weight="bold">C</text>
+                        <text x="28" y="96" font-size="14" fill="#ef4444" font-weight="bold">D</text>
+                        <text x="182" y="96" font-size="14" fill="#ef4444" font-weight="bold">E</text>
+                        <text x="70" y="60" font-size="12" fill="#581c87">AD</text>
+                        <text x="45" y="125" font-size="12" fill="#581c87">DB</text>
+                        <text x="145" y="60" font-size="12" fill="#581c87">AE</text>
+                        <text x="170" y="125" font-size="12" fill="#581c87">EC</text>
+                    </svg>
+                </div>
+                <div class="formula">$$ \text{if } DE \parallel BC \quad \rightarrow \quad \frac{AD}{DB} = \frac{AE}{EC} $$</div>
+            </div>
+
+            <div class="formula-card">
+                <h3 class="text-xl font-semibold text-gray-700">۲. قضیه فیثاغورث</h3>
+                <div class="definition">
+                    <p><strong>تعریف مطابق کتاب:</strong> در هر مثلث قایم‌الزاویه مربع وتر مساوی با مجموع مربع‌های اضلاع قایم آن می‌باشد.</p>
+                </div>
+                <div class="visual-example">
+                    <svg width="240" height="210" viewBox="0 0 240 210" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="100" y="120" width="60" height="60" style="fill:#fecaca;stroke:#dc2626;stroke-width:1.5"/>
+                        <rect x="20" y="40" width="80" height="80" style="fill:#dbeafe;stroke:#2563eb;stroke-width:1.5"/>
+                        <g transform="translate(100 40) rotate(53.13)">
+                           <rect x="0" y="-100" width="100" height="100" style="fill:#dcfce7;stroke:#16a34a;stroke-width:1.5"/>
+                        </g>
+                        <polygon points="100,40 100,120 160,120" style="fill:#fef08a;stroke:black;stroke-width:2"/>
+                        <text x="125" y="85" font-size="16" fill="black">a</text>
+                        <text x="55" y="125" font-size="16" fill="black">b</text>
+                        <text x="135" y="55" font-size="16" fill="black">c</text>
+                        <text x="125" y="155" font-size="16" fill="#dc2626">a²</text>
+                        <text x="55" y="85" font-size="16" fill="#2563eb">b²</text>
+                        <text x="50" y="0" font-size="16" fill="#16a34a">c²</text>
+                    </svg>
+                </div>
+                <div class="formula">$$ c^2 = a^2 + b^2 $$</div>
+                <ul class="variables-list">
+                    <li><code>c</code> : وتر (ضلع مقابل زاویه ۹۰ درجه)</li>
+                    <li><code>a</code> : ضلع قائمه اول</li>
+                    <li><code>b</code> : ضلع قائمه دوم</li>
+                </ul>
+            </div>
+            
+            <div class="formula-card">
+                <h3 class="text-xl font-semibold text-gray-700">۳. قضایای مثلث متساوی‌الساقین</h3>
+                <div class="definition">
+                    <p><strong>تعریف:</strong> مثلثی که دو ضلع آن با هم مساوی باشند (به آنها ساق می‌گویند).</p>
+                </div>
+                <div class="visual-example">
+                    <svg width="160" height="140" viewBox="0 0 160 140" xmlns="http://www.w3.org/2000/svg">
+                        <polygon points="80,10 10,130 150,130" style="fill:none;stroke:#7c3aed;stroke-width:2"/>
+                        <line x1="48" y1="75" x2="52" y2="65" stroke="#7c3aed" stroke-width="2"/>
+                        <line x1="112" y1="75" x2="108" y2="65" stroke="#7c3aed" stroke-width="2"/>
+                        <path d="M 20 130 A 15 15 0 0 1 35 125" fill="none" stroke="#f97316" stroke-width="1.5"/>
+                        <path d="M 140 130 A 15 15 0 0 0 125 125" fill="none" stroke="#f97316" stroke-width="1.5"/>
+                    </svg>
+                </div>
+                <p class="mt-2 text-gray-600"><strong>قانون کلیدی:</strong> در مثلث متساوی‌الساقین، زوایای مقابل اضلاع مساوی (ساق‌ها)، با هم مساوی هستند. برعکس این قضیه نیز درست است.</p>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="text-center py-6 bg-gray-800 text-white mt-10">
+        <p>با آرزوی موفقیت در امتحان! ✨ تو از پسش برمیای!</p>
+    </footer>
+
+</body>
+</html>
